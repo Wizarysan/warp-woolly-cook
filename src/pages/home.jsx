@@ -16,8 +16,6 @@ export default function Home() {
       <div style={{
         display: 'flex',
         flexWrap: 'wrap',
-        margin: -10,
-        justifyContent: 'center'
       }}>
       {
         todos.map((todo) => (
@@ -28,11 +26,12 @@ export default function Home() {
             margin: 10,
             display: 'flex',
             flexDirection: 'column',
-            alli: 'center',
+            alignContent: 'middle',
+            alignItems: 'center',
             backgroundColor: todo.completed ? 'green' : 'crimson',
           }}>
+            <div>#{todo.id}</div>
             <div><p>{todo.title.replace(/^(.{20}).{2,}/, "$1…")}</p></div>
-            <div><a>view details</a></div>
           </div>
         ))
       }
