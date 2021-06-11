@@ -14,16 +14,25 @@ export default function Home() {
     <>
       <h1> TODO list </h1>
       <div style={{
-        display: 'flex'  
+        display: 'flex',
+        flexWrap: 'wrap',
+        margin: -10,
+        justifyContent: 'center'
       }}>
       {
         todos.map((todo) => (
           <div style={{
             border: 'solid 1px',
             padding: 20,
+            flex: '250px 0 0',
+            margin: 10,
+            display: 'flex',
+            flexDirection: 'column',
+            alli: 'center',
+            backgroundColor: todo.completed ? 'green' : 'crimson',
           }}>
-            <h2>{todo.id}</h2>
-            <p>{todo.title.replace(/^(.{20}).{2,}/, "$1…")}</p>
+            <div><p>{todo.title.replace(/^(.{20}).{2,}/, "$1…")}</p></div>
+            <div><a>view details</a></div>
           </div>
         ))
       }
