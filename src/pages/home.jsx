@@ -1,6 +1,5 @@
 import * as React from "react";
 import { animated } from "react-spring";
-import { useWiggle } from "../hooks/wiggle";
 import { Link } from "wouter";
 
 // Our language strings for the header
@@ -28,9 +27,6 @@ export default function Home() {
   // We'll call setHello when the user clicks to change the string
   const [hello, setHello] = React.useState(strings[0]);
   
-  // The wiggle function defined in /hooks/wiggle.jsx returns the style effect and trigger function
-  // We can attach this to events on elements in the page and apply the resulting style
-  const [style, trigger] = useWiggle({ x: 5, y: 5, scale: 1 });
 
   // When the user clicks we change the header language
   const handleChangeHello = () => {
