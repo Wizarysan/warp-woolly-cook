@@ -26,17 +26,20 @@ export default function Home() {
       }}>
       {
         matchingTodos.map((todo) => (
-          <div style={{
-            border: 'solid 1px',
-            padding: 20,
-            flex: '250px 0 0',
-            margin: 10,
-            display: 'flex',
-            flexDirection: 'column',
-            alignContent: 'middle',
-            alignItems: 'center',
-            backgroundColor: todo.completed ? 'green' : 'crimson',
-          }}>
+          <div
+            style={{
+              border: 'solid 1px',
+              padding: 20,
+              flex: '250px 0 0',
+              margin: 10,
+              display: 'flex',
+              flexDirection: 'column',
+              alignContent: 'middle',
+              alignItems: 'center',
+              backgroundColor: todo.completed ? 'green' : 'crimson',
+            }}
+            title={todo.title}
+          >
             <div>#{todo.id}</div>
             <div><p>{todo.title.replace(/^(.{20}).{2,}/, "$1…")}</p></div>
           </div>
