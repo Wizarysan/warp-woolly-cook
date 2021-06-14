@@ -35,16 +35,16 @@ This challenge is hosted on glitch please see below for any help on how to use i
 # this challenge's requirements
 
 The react app should have 2 page:
-- a top page for displaying/searching a list of TODO items
-- a "todo details" page to display the details of a todo item
+- a top page (route: '/') for displaying/searching a list of TODO items
+- a "todo details" (route: '/todos/<todo item number>') page to display the details of a todo item
 
 ### Top page requirements
 
 - the page should display the list of todo items fetched from the https://jsonplaceholder.typicode.com/todos API (visit the URL to see the data format)
-- items should be displayed in a grid, with each card having 250px width, and 20px between the cards
+- items should be displayed in a grid, with each card having 250px width, and 20px between the cards. Design should be responsive to be useable on various screen sizes, down to mobile phone.
 - card background should be 'green' for items which are completed, and 'crimson' for items which are not completed
 - each card should show the todo item number, and the first 20 characters of the item title
-- the top of the page should have an search input field. When text in input inside it, only items which have a title contraining the search text should be be displayed. When nothing is input in the field the whole list of item
+- the top of the page should have an search input field. When text in input inside it, only items which have a title contraining the search text should be be displayed. When nothing is input in the field the whole list of items is displayed.
 
 ![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2Fexample-top.png?v=1623632882331)
 
