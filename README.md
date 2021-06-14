@@ -1,8 +1,9 @@
 # TODO app!
 
-This project is abase for a simple Reactjs coding challenge. Please read carefully the below instructions
+This project is abase for a simple Reactjs coding challenge. Please read carefully the below instructions.
+There is a section on how to edit and submit your challenge, and a following section explaining the requirements.
 
-## IMPORTANT! READ before starting
+# IMPORTANT! READ before starting
 By default for anonymous users (non logged in), your code and app will only remain on glitch.com for 5 days. In order to not lose your challenge, please create a glitch.com account and log in to glitch.com before proceeding.
 
 The following README contains instructions to guide you through the coding challenge, please read them carefully.
@@ -20,7 +21,18 @@ The following README contains instructions to guide you through the coding chall
 4. **Turn in**: When you finish coding, send your URL to us so we can review your code.
 
 
-## requirements
+## Glitch help!
+
+This challenge is hosted on glitch please see below for any help on how to use it.
+
+[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
+
+- Want more details about React on Glitch? We've got a [Help Center article](https://help.glitch.com/kb/article/112) for you.
+- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
+- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
+
+
+# this challenge's requirements
 
 The react app should have 2 page:
 - a top page for displaying/searching a list of TODO items
@@ -28,19 +40,14 @@ The react app should have 2 page:
 
 ### Top page requirements
 
-- the page should display the list of todo items from the https://jsonplaceholder.typicode.com/todos API (visit the URL to see the data format)
+- the page should display the list of todo items fetched from the https://jsonplaceholder.typicode.com/todos API (visit the URL to see the data format)
 - items should be displayed in a grid, with each card having 250px width, and 20px between the cards
-- card background should be 'green' for items which are completed, and 'crimson' for items whioch a
+- card background should be 'green' for items which are completed, and 'crimson' for items which are not completed
+- each card should show the todo item number, and the first 20 characters of the item title
+- the top of the page should have an search input field. When text in input inside it, only items which have a title contraining the search text should be be displayed. When nothing is input in the field the whole list of item
 
 ![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2Fexample-top.png?v=1623632882331)
 
 
 
 
-## Glitch help!
-
-[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
-
-- Want more details about React on Glitch? We've got a [Help Center article](https://help.glitch.com/kb/article/112) for you.
-- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
