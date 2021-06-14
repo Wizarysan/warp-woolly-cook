@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Switch, Route, Router } from "wouter";
 import Home from "../pages/home";
+import TodoDetails from "../pages/details";
 
 /*
 The router is imported in app.jsx
@@ -13,5 +14,6 @@ Our site just has 1 routes in it–Home and About
 export default () => (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/todos/:itemNb" component={TodoDetails} />
     </Switch>
 );

@@ -44,8 +44,8 @@ The react app should have 2 pages:
 - items should be displayed in a grid, with each card having 250px width, and 20px between the cards. Design should be responsive to be useable on various screen sizes, down to mobile phone.
 - card background should be 'green' for items which are completed, and 'crimson' for items which are not completed
 - each card should show the todo item number, and the first 20 characters of the item title
-- the top of the page should have an search input field. When text in input inside it, only items which have a title contraining the search text should be be displayed. When nothing is input in the field the whole list of items is displayed.
-- clicking on a todo item's card should go to the 
+- the top of the page should have an search input field. When text in input inside it, only items which have a title containing the search text should be be displayed. When nothing is input in the field the whole list of items is displayed.
+- clicking on a todo item's card should go to the todo item details page for that item
   
 ![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2FScreen%20Shot%202021-06-14%20at%2011.28.49.png?v=1623637831386)
 
@@ -60,6 +60,8 @@ The react app should have 2 pages:
   - todo item details: `https://jsonplaceholder.typicode.com/todos/{item #}` (eg. https://jsonplaceholder.typicode.com/todos/1)
   - user details `https://jsonplaceholder.typicode.com/users/{user id}` (eg. https://jsonplaceholder.typicode.com/users/1)
 - for this page, look and feel is not specifically considered in this challenge
+
+![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2FScreen%20Shot%202021-06-14%20at%2011.40.10.png?v=1623638430344)
   
 
 ### non-functional requirements

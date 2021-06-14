@@ -42,7 +42,7 @@ export default function Home() {
               }}
               title={todo.title}
             >
-              <div>#{todo.id}</div>
+              <div><Link to={`/todos/${todo.id}`}>#{todo.id}</Link></div>
               <div><p>{todo.title.replace(/^(.{20}).{2,}/, "$1…")}</p></div>
             </div>
           ))
