@@ -19,11 +19,12 @@ export default function Home() {
   return (
     <>
       <h1> TODO list </h1>
-      <input type="text" value={searchTerm} onChange={onChange} />
+      Search by title includes: <input type="text" value={searchTerm} onChange={onChange} />
       <div style={{ margin: 'auto' }}>
         <div style={{
           display: 'flex',
           flexWrap: 'wrap',
+          justifyContent: 'center',
         }}>
         {
           matchingTodos.map((todo) => (
