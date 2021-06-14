@@ -51,5 +51,12 @@ The react app should have 2 pages:
 
 ### todo item details page
 
-- the page should displaye the following fields 
+- the page should display the following fields 
 - for this page, look and feel is not specifically considered in this challenge
+  
+
+### non-functional requirements
+  
+On top of the requirements above, items we will be looking at include:
+- Code quality (readability, use of modern syntax...)
+- app architecture (folder structure, code spliting, ...)
