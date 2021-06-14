@@ -30,7 +30,6 @@ This challenge is hosted on glitch please see below for any help on how to use i
 
 - Want more details about React on Glitch? We've got a [Help Center article](https://help.glitch.com/kb/article/112) for you.
 - Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
 
 
 # this challenge's requirements

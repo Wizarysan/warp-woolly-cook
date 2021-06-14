@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from "react";
 
 // Home function that is reflected across the site
-export default function Home() {
+export default function App() {
   return (
     <>
       <main role="main" className="wrapper">
         <h1>Welcome to the TODO app code challenge.</h1>
         <p>Please read the instructions in the README carefully to develop and submit your code challenge.</p>
       </main>
-      {/* Footer links to Home and About, Link elements matched in router.jsx */}
+
+      {/* Footer links to Home and About */}
       <footer className="footer">
-        <div className="links">
-          <Link href="/">Home</Link>
-          <span className="divider">|</span>
-          <Link href="/about">About</Link>
-        </div>
         <a
           className="btn--remix"
           target="_top"
@@ -24,5 +20,6 @@ export default function Home() {
           Remix on Glitch
         </a>
       </footer>
+    </>
   );
 }
