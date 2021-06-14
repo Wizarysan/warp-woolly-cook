@@ -47,7 +47,7 @@ The react app should have 2 pages:
 - the top of the page should have an search input field. When text in input inside it, only items which have a title contraining the search text should be be displayed. When nothing is input in the field the whole list of items is displayed.
 - clicking on a todo item's card should go to the 
   
-![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2Fexample-top.png?v=1623632882331)
+![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2FScreen%20Shot%202021-06-14%20at%2011.28.49.png?v=1623637831386)
 
 
 ### todo item details page
