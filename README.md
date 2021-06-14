@@ -1,7 +1,8 @@
-# TODO app!
+# TODO app code challenge
 
-This project is abase for a simple Reactjs coding challenge. Please read carefully the below instructions.
+This project is a base (you get started with react build and hot reloading already setup) for a simple Reactjs coding challenge. Please read carefully the below instructions.
 There is a section on how to edit and submit your challenge, and a following section explaining the requirements.
+
 
 # IMPORTANT! READ before starting
 By default for anonymous users (non logged in), your code and app will only remain on glitch.com for 5 days. In order to not lose your challenge, please create a glitch.com account and log in to glitch.com before proceeding.
@@ -38,7 +39,7 @@ The react app should have 2 pages:
 - a top page (route: '/') for displaying/searching a list of TODO items
 - a "todo details" (route: '/todos/<todo item number>') page to display the details of a specific todo item
 
-### Top page requirements
+## Top page requirements
 
 - the page should display the list of todo items fetched from the https://jsonplaceholder.typicode.com/todos API (visit the URL to see the data format)
 - items should be displayed in a grid, with each card having 250px width, and 20px between the cards. Design should be responsive to be useable on various screen sizes, down to mobile phone.
@@ -50,7 +51,7 @@ The react app should have 2 pages:
 ![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2FScreen%20Shot%202021-06-14%20at%2011.28.49.png?v=1623637831386)
 
 
-### todo item details page
+## todo item details page requirements
 
 - the page should display the following fields
   - user name
@@ -64,8 +65,9 @@ The react app should have 2 pages:
 ![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2FScreen%20Shot%202021-06-14%20at%2011.40.10.png?v=1623638430344)
   
 
-### non-functional requirements
+## non-functional requirements
   
 On top of the requirements above, items we will be looking at include:
 - Code quality (readability, use of modern syntax...)
+- Support for edge cases (API error, API slow to respond...)
 - app architecture (folder structure, code spliting, ...)
