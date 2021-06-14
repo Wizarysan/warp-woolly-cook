@@ -34,9 +34,9 @@ This challenge is hosted on glitch please see below for any help on how to use i
 
 # this challenge's requirements
 
-The react app should have 2 page:
+The react app should have 2 pages:
 - a top page (route: '/') for displaying/searching a list of TODO items
-- a "todo details" (route: '/todos/<todo item number>') page to display the details of a todo item
+- a "todo details" (route: '/todos/<todo item number>') page to display the details of a specific todo item
 
 ### Top page requirements
 
@@ -49,5 +49,7 @@ The react app should have 2 page:
 ![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2Fexample-top.png?v=1623632882331)
 
 
+### todo item details page
 
-
+- the page should displaye the following fields 
+- for this page, look and feel is not specifically considered in this challenge
