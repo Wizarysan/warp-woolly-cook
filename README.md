@@ -41,12 +41,14 @@ The react app should have 2 pages:
 ## Top page requirements
 
 - the page should display the list of todo items fetched from the https://jsonplaceholder.typicode.com/todos API (visit the URL to see the data format)
-- items should be displayed in a grid, with each card having 250px width, and 20px between the cards. Design should be responsive to be useable on various screen sizes, down to mobile phone.
+- items should be displayed in a grid, with each card having 250px width, and 20px between the cards. Those sizes are fixed for all screen sizes.
+- Design should be responsive to be useable on various screen sizes, down to mobile phone.
 - card background should be 'green' for items which are completed, and 'crimson' for items which are not completed
 - each card should show the todo item number, and the first 20 characters of the item title
 - the top of the page should have an search input field. When text in input inside it, only items which have a title containing the search text should be be displayed. When nothing is input in the field the whole list of items is displayed.
 - clicking on a todo item's card should go to the todo item details page for that item
   
+Example:
 ![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2FScreen%20Shot%202021-06-14%20at%2011.28.49.png?v=1623637831386)
 
 
@@ -70,4 +72,4 @@ On top of the requirements above, items we will be looking at include:
 - Code quality (readability, use of modern syntax, linting...)
 - Support for edge cases (API error, API slow to respond...)
 - app architecture (folder structure, code spliting, ...)
-- automated test would be a big plus (they cannot run on glitch, so if you use a github repo for local development and testing, please )
+- automated test would be a big plus (they cannot run on glitch, so you'd most likely develop locally from you github repo, then sync it to glitch using the import/export function)
