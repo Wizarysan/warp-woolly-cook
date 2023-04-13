@@ -1,6 +1,6 @@
 import React from "react";
 
 const Todo = ({number, title, status}) => 
-  <div>{number}</div>
+  <div>{number} {title}</div>
 
 export default Todo

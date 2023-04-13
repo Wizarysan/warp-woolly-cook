@@ -4,6 +4,7 @@ import Todo from './Todo'
 // Home function that is reflected across the site
 export default function App() {
   const [todos, setTodos] = useState([])
+  const [filteredTodos, setFilteredTodos] = useState([])
   const [search, setSearch] = useState("")
   
   useEffect(()=>{
@@ -19,14 +20,13 @@ export default function App() {
   
   const searchTodo = (query) => {
     setSearch(query)
-            if (searchInput !== '') {
-            const filteredData = APIData.filter((item) => {
-                return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
-            })
-            setFilteredResults(filteredData)
+        if (search !== '') {
+          
+          const filteredData = todos.filter((todo) => todo.title.includes(query))
+          setFilteredTodos(filteredData)
         }
         else{
-            setFilteredResults(APIData)
+          setFilteredTodos(todos)
         }
   }
   
@@ -42,7 +42,10 @@ export default function App() {
             onChange={e => searchTodo(e.target.value)}
           />
         <div>
-         {todos.map(todo=> <Todo number={todo.id} key={todo.id}/>)
+         {filteredTodos.map(todo=> <Todo 
+                                     number={todo.id} 
+                                     title={todo.title}
+                                     key={todo.id}/>)
         }
         </div>
       </main>
