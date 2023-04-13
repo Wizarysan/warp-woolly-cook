@@ -5,9 +5,16 @@ export default function App() {
   const [todos, setTodos] = useState([])
   
   useEffect(()=>{
+    const fetchData = async () => {
+      const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+      const json = await response.json();
+      console.log(json)
+      setTodos(json);
+    }
+
+    fetchData().catch(console.error);
     
-    
-    // fetch('https://jsonplaceholder.typicode.com/todos')
+    // fetch('')
     // .then((result)=>result.json().then(x=>console.log(x)))
   }, [])
   
@@ -15,7 +22,8 @@ export default function App() {
     <>
       <main role="main" className="wrapper">
         <h1></h1>
-         {todos.map(todo=> todo)}
+         {//todos.map(todo=> todo)
+        }
       </main>
 
       {/* Footer links to Home and About */}
