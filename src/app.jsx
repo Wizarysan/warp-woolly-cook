@@ -4,7 +4,7 @@ import Todo from './Todo'
 // Home function that is reflected across the site
 export default function App() {
   const [todos, setTodos] = useState([])
-  
+  const [search, setSearch] = useState("")
   
   useEffect(()=>{
     const fetchData = async () => {
@@ -14,17 +14,33 @@ export default function App() {
       setTodos(json);
     }
 
-    fetchData().catch(console.error);
-    
-    // fetch('')
-    // .then((result)=>result.json().then(x=>console.log(x)))
+    fetchData().catch(console.error);    
   }, [])
+  
+  const searchTodo = (query) => {
+    setSearch(query)
+            if (searchInput !== '') {
+            const filteredData = APIData.filter((item) => {
+                return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
+            })
+            setFilteredResults(filteredData)
+        }
+        else{
+            setFilteredResults(APIData)
+        }
+  }
   
   return (
     <>
       <main role="main" className="wrapper">
         
-        <input type="text" name="name" onChange={}/>
+        <input 
+            type="text" 
+            name="name"
+            placeholder="Search Todos"
+            value={search}
+            onChange={e => searchTodo(e.target.value)}
+          />
         <div>
          {todos.map(todo=> <Todo number={todo.id} key={todo.id}/>)
         }
