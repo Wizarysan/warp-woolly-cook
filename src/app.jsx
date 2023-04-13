@@ -3,7 +3,7 @@ import Todo from './components/Todo'
 
 // Home function that is reflected across the site
 export default function App() {
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(null)
   const [filteredTodos, setFilteredTodos] = useState([])
   const [search, setSearch] = useState("")
   
@@ -20,8 +20,7 @@ export default function App() {
   
   const searchTodo = (query) => {
     setSearch(query)
-        if (search !== '') {
-          
+        if (search !== '') {          
           const filteredData = todos.filter((todo) => todo.title.includes(query))
           setFilteredTodos(filteredData)
         }
