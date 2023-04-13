@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import Todo from './Todo'
 
 // Home function that is reflected across the site
 export default function App() {
   const [todos, setTodos] = useState([])
+  
   
   useEffect(()=>{
     const fetchData = async () => {
@@ -21,9 +23,12 @@ export default function App() {
   return (
     <>
       <main role="main" className="wrapper">
-        <h1></h1>
-         {//todos.map(todo=> todo)
+        
+        <input type="text" name="name" onChange={}/>
+        <div>
+         {todos.map(todo=> <Todo number={todo.id} key={todo.id}/>)
         }
+        </div>
       </main>
 
       {/* Footer links to Home and About */}
