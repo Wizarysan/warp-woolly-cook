@@ -3,8 +3,8 @@ import Todo from './components/Todo'
 
 // Home function that is reflected across the site
 export default function App() {
-  const [todos, setTodos] = useState(null)
-  const [filteredTodos, setFilteredTodos] = useState([])
+  const [todos, setTodos] = useState([])
+  const [filteredTodos, setFilteredTodos] = useState(null)
   const [search, setSearch] = useState("")
   
   useEffect(()=>{
@@ -20,13 +20,12 @@ export default function App() {
   
   const searchTodo = (query) => {
     setSearch(query)
-        if (search !== '') {          
-          const filteredData = todos.filter((todo) => todo.title.includes(query))
-          setFilteredTodos(filteredData)
-        }
-        else{
-          setFilteredTodos(todos)
-        }
+      if (search !== '') {
+        setFilteredTodos(todos.filter((todo) => todo.title.includes(query)))
+      }
+      else{
+        setFilteredTodos(todos)
+      }
   }
   
   return (
@@ -41,11 +40,13 @@ export default function App() {
             onChange={e => searchTodo(e.target.value)}
           />
         <div>
-         {filteredTodos.map(todo=> <Todo 
-                                     number={todo.id} 
-                                     title={todo.title}
-                                     key={todo.id}/>)
-        }
+         {(filteredTodos ? filteredTodos : todos)
+            .map(todo=> <Todo 
+                           number={todo.id} 
+                           title={todo.title}
+                           key={todo.id}
+                        />)
+          }
         </div>
       </main>
 
