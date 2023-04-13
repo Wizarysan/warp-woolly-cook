@@ -13,11 +13,18 @@ Root of react site
 - And App which defines the content and navigation
 */
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+]);
+
 // Render the site https://reactjs.org/docs/react-dom.html#render
 ReactDOM.render(
   <React.StrictMode>
     <HelmetProvider>
-      <App />
+      <RouterProvider router={router} />
     </HelmetProvider>
   </React.StrictMode>,
   document.getElementById("root")
