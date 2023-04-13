@@ -1,2 +1,2 @@
 
-const Todo = () => <div></div>
+const Todo = ({}) => <div></div>
