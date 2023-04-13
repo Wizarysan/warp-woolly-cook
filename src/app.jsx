@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Todo from './Todo'
+import Todo from './components/Todo'
 
 // Home function that is reflected across the site
 export default function App() {
