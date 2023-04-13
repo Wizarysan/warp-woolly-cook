@@ -1,9 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
 import App from "./app.jsx";
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -13,18 +9,11 @@ Root of react site
 - And App which defines the content and navigation
 */
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-]);
-
 // Render the site https://reactjs.org/docs/react-dom.html#render
 ReactDOM.render(
   <React.StrictMode>
     <HelmetProvider>
-      <RouterProvider router={router} />
+      <App/>
     </HelmetProvider>
   </React.StrictMode>,
   document.getElementById("root")

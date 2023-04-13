@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import Todo from './components/Todo'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Todo />,
+  },
+]);
 
 // Home function that is reflected across the site
 export default function App() {
