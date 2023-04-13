@@ -2,11 +2,20 @@ import React, { useState, useEffect } from "react";
 
 // Home function that is reflected across the site
 export default function App() {
+  const [todos, setTodos] = useState([])
+  
+  useEffect(()=>{
+    
+    
+    // fetch('https://jsonplaceholder.typicode.com/todos')
+    // .then((result)=>result.json().then(x=>console.log(x)))
+  }, [])
+  
   return (
     <>
       <main role="main" className="wrapper">
-        <h1>Welcome to the TODO app code challenge.</h1>
-        <p>Please read the instructions in the README carefully to develop and submit your code challenge.</p>
+        <h1></h1>
+         {todos.map(todo=> todo)}
       </main>
 
       {/* Footer links to Home and About */}
