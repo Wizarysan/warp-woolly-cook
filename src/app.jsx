@@ -1,64 +1,17 @@
 import React, { useState, useEffect } from "react";
 import {
-  createBrowserRouter,
-  RouterProvider,
+  Routes, Route
 } from "react-router-dom";
-import Todo from './components/Todo'
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Todo />,
-  },
-]);
+import Todos from './components/Todos'
+import TodoFull from "./components/Todo/Todo";
 
 // Home function that is reflected across the site
 export default function App() {
-  const [todos, setTodos] = useState([])
-  const [filteredTodos, setFilteredTodos] = useState(null)
-  const [search, setSearch] = useState("")
-  
-  useEffect(()=>{
-    const fetchData = async () => {
-      const response = await fetch('https://jsonplaceholder.typicode.com/todos');
-      const json = await response.json();
-      console.log(json)
-      setTodos(json);
-    }
-
-    fetchData().catch(console.error);    
-  }, [])
-  
-  const searchTodo = (query) => {
-    setSearch(query)
-      if (search !== '') {
-        setFilteredTodos(todos.filter((todo) => todo.title.includes(query)))
-      }
-      else{
-        setFilteredTodos(todos)
-      }
-  }
   
   return (
     <>
       <main role="main" className="wrapper">
-        
-        <input 
-            type="text" 
-            name="name"
-            placeholder="Search Todos"
-            value={search}
-            onChange={e => searchTodo(e.target.value)}
-          />
-        <div>
-         {(filteredTodos ? filteredTodos : todos)
-            .map(todo=> <Todo 
-                           number={todo.id} 
-                           title={todo.title}
-                           key={todo.id}
-                        />)
-          }
-        </div>
+        <TodoFull />
       </main>
 
       {/* Footer links to Home and About */}

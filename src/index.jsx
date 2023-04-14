@@ -1,7 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import App from "./app.jsx";
+import Todos from './components/Todos'
+import TodoFull from "./components/Todo/Todo";
 import { HelmetProvider } from 'react-helmet-async';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Todos />,
+  },
+  {
+    path: "todos/:id",
+    element: <TodoFull />,
+  },
+]);
 
 /*
 Root of react site 
@@ -13,6 +30,7 @@ Root of react site
 ReactDOM.render(
   <React.StrictMode>
     <HelmetProvider>
+      {/* <RouterProvider router={router} /> */}
       <App/>
     </HelmetProvider>
   </React.StrictMode>,

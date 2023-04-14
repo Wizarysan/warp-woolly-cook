@@ -1,6 +1,6 @@
 import React from "react";
 
-const Todo = ({number, title, status}) => 
+const TodoFull = ({number, title, userId, completed}) => 
   <div>{number} {title}</div>
 
-export default Todo
+export default TodoFull
