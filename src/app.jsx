@@ -1,17 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
-  Routes, Route
+  createBrowserRouter,
+  RouterProvider,
 } from "react-router-dom";
 import Todos from './components/Todos'
-import TodoFull from "./components/Todo/Todo";
+import TodoFull from "./components/TodoFull";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Todos />,
+  },
+  {
+    path: "todos/:id",
+    element: <TodoFull />,
+  },
+]);
 
 // Home function that is reflected across the site
-export default function App() {
-  
+export default function App() {  
   return (
     <>
       <main role="main" className="wrapper">
-        <TodoFull />
+        <RouterProvider router={router} />
       </main>
 
       {/* Footer links to Home and About */}

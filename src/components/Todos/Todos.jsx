@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
+import styled from 'styled-components';
 import { fetchData } from "../../api";
 import { TODOS_ENDPOINT } from "../../api/constants";
 
 import Todo from './../Todo'
+
+const StyledTodos = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+`
 
 const Todos = () => {
   const [todos, setTodos] = useState([])
@@ -22,17 +29,18 @@ const Todos = () => {
   }
 
   return(<>
+        <span>Search by title includes: </span>
         <input 
             type="text" 
             name="name"
             placeholder="Search Todos"
             value={search}
             onChange={e => searchTodo(e.target.value)}
-          />
-        <div>
+          />        
+        <StyledTodos>
          {(filteredTodos ? filteredTodos : todos)
-            .map(todo=> <Todo number={todo.id} title={todo.title} key={todo.id} />)}         
-        </div>
+            .map(todo=> <Todo number={todo.id} title={todo.title} completed={todo.completed} key={todo.id} />)}         
+        </StyledTodos>
   </>)
 
 }

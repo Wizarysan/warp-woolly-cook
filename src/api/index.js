@@ -3,6 +3,7 @@ const fetchData = async (handler, url, id = "") => {
     const json = await response.json();
     console.log(json)
     handler(json);
+    return json
 }
 
 export { fetchData }  
