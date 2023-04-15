@@ -1,3 +1,3 @@
-import TodoFull from './TodoFull'
+import TodoFull from './TodoFull';
 
-export default TodoFull
+export default TodoFull;
