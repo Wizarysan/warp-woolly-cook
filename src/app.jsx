@@ -17,25 +17,17 @@ const router = createBrowserRouter([
   },
 ]);
 
-// Home function that is reflected across the site
 export default function App() {  
   return (
-    <>
+    <div style={{padding: '10px'}}>
       <main role="main" className="wrapper">
         <RouterProvider router={router} />
       </main>
 
-      {/* Footer links to Home and About */}
+      {/* We can put some navigation links and footer data here */}
       <footer className="footer">
-        <a
-          className="btn--remix"
-          target="_top"
-          href="https://glitch.com/edit/#!/remix/glitch-hello-react"
-        >
-          <img src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140" alt="" />
-          Remix on Glitch
-        </a>
+        <a target="_top" href="/">Home</a>
       </footer>
-    </>
+    </div>
   );
 }

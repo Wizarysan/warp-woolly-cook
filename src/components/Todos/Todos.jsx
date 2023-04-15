@@ -15,9 +15,10 @@ const Todos = () => {
   const [todos, setTodos] = useState([])
   const [filteredTodos, setFilteredTodos] = useState(null)
   const [search, setSearch] = useState("")
+  const [error, setError] = useState(null)
   
   useEffect(()=>{
-    fetchData(setTodos, TODOS_ENDPOINT).catch(console.error);    
+    fetchData(setTodos, setError, TODOS_ENDPOINT).catch(console.error);    
   }, [])
   
   const searchTodo = (query) => {
@@ -27,6 +28,8 @@ const Todos = () => {
       todos
     )
   }
+
+  if(error) return (<p>There was some error: {error.message}</p>)
 
   return(<>
         <span>Search by title includes: </span>

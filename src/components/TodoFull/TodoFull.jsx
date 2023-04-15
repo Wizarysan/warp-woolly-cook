@@ -7,12 +7,15 @@ const TodoFull = () => {
   let params = useParams()
   const [todo, setTodo] = useState({})
   const [user, setUser] = useState({})
+  const [error, setError] = useState(null)
 
   useEffect(()=>{
-    fetchData(setTodo, TODOS_ENDPOINT, params.id).then(
-      result => fetchData(setUser, USER_ENDPOINT, result.userId).catch(console.error)
+    fetchData(setTodo, setError, TODOS_ENDPOINT, params.id).then(
+      result => fetchData(setUser, setError, USER_ENDPOINT, result.userId).catch(console.error)
     ).catch(console.error);        
   }, [])
+
+  if(error) return (<p>There was some error: {error.message}</p>)
 
   return (
     <div>
